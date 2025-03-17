@@ -195,7 +195,7 @@ export default function ChemicalReactions() {
     },
     'N2': {
       result: 'N₂ (Nitrogen Gas)',
-      description: 'The most abundant gas in Earth\'s atmosphere.',
+      description: 'The most abundant gas in Earth&apos;s atmosphere.',
       animation: '🌬️',
       animationType: 'default',
       realWorld: 'Used in food packaging, cryogenics, and tire filling.',
@@ -512,7 +512,7 @@ export default function ChemicalReactions() {
       {
         result: 'N₂ (Nitrogen Gas)',
         elements: 'Two Nitrogen atoms (N₂)',
-        description: 'The most abundant gas in Earth\'s atmosphere.'
+        description: 'The most abundant gas in Earth&apos;s atmosphere.'
       },
       {
         result: 'NH₃ (Ammonia)',

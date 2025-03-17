@@ -22,7 +22,7 @@ export default function Home() {
                 Discover how gravity works by playing with objects in different planetary environments!
               </p>
               <div className="bg-blue-500/10 rounded-lg p-4 text-sm">
-                Fun Fact: Gravity on Mars is about 38% of Earth's gravity!
+                Fun Fact: Gravity on Mars is about 38% of Earth&apos;s gravity!
               </div>
             </div>
           </Link>

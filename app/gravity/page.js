@@ -83,7 +83,7 @@ export default function GravityExplorer() {
             </li>
             <li className="flex items-start">
               <span className="text-blue-400 mr-2">•</span>
-              Jupiter's gravity is so strong that it affects the orbits of other planets!
+              Jupiter&apos;s gravity is so strong that it affects the orbits of other planets!
             </li>
           </ul>
         </div>
