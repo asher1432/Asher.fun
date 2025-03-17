@@ -2,13 +2,27 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import './animations.css';
+
+// Add keyframes using CSS-in-JS without DOM manipulation
+const keyframeStyles = {
+  float: {
+    '0%, 100%': { transform: 'translateY(0px)' },
+    '50%': { transform: 'translateY(-10px)' }
+  },
+  wiggle: {
+    '0%, 100%': { transform: 'rotate(0deg)' },
+    '25%': { transform: 'rotate(10deg)' },
+    '75%': { transform: 'rotate(-10deg)' }
+  }
+};
 
 const MoleculeAnimation = ({ type }) => {
   const animations = {
     water: (
       <div className="relative w-32 h-32">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-          <div className="relative animate-[float_3s_ease-in-out_infinite]">
+          <div className="relative floatAnimation">
             {/* Oxygen */}
             <div className="w-12 h-12 bg-red-400 rounded-full shadow-lg shadow-red-400/50">
               {/* Electron cloud animation */}
@@ -142,21 +156,6 @@ const MoleculeAnimation = ({ type }) => {
 
   return animations[type] || animations.default;
 };
-
-// Add new keyframes for animations
-const style = document.createElement('style');
-style.textContent = `
-  @keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-  }
-  @keyframes wiggle {
-    0%, 100% { transform: rotate(0deg); }
-    25% { transform: rotate(10deg); }
-    75% { transform: rotate(-10deg); }
-  }
-`;
-document.head.appendChild(style);
 
 export default function ChemicalReactions() {
   const [selectedElements, setSelectedElements] = useState([]);
